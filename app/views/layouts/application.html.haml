@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Pivotal SSL
+    %title Pivotal SSL Connect
     = stylesheet_link_tag    'application'
     = stylesheet_link_tag    '/pivotal-ui/pivotal-ui.min.css'
     = javascript_include_tag 'application'
@@ -12,9 +12,13 @@
       .pane.bg-full-bleed.bg-dark-1.pvl
         .container.pvn.mvn
           .row
-            .col-xs-4
-              %h1.h3.man.type-neutral-8 Pivotal SSL
-            .col-xs-20
-              .txt-r
+            .col-xs-19
+              .media
+                .media-left
+                  %i.fa.fa-certificate.h3.type-brand-3.mvm
+                .media-body
+                  %h1.pbn.type-neutral-9.h3.mvm Pivotal SSL Connect
+            .col-xs-5
+              .txt-r.mtl
                 %a.link-text Help
       = yield
