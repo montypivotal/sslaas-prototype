@@ -1,6 +1,28 @@
-%h1
-  = "#{t('hello')}"
-%p
-  There are
-  %span.type-accent-3.em-high= "#{@time}"
-  seconds until end of day.
+.pane.bg-full-bleed.bg-dark-1.pvl
+	.container.pvn.mvn
+		.row
+			.col-sm-4
+				%h1.h3.man.type-neutral-8 Pivotal SSL
+			.col-sm-20
+				.txt-r
+					%a.link-text Help
+.container
+	.mtxl
+		.row
+			.col-sm-8
+				.media
+					.media-left
+						%i.fa.fa-certificate.h1.type-neutral-4
+					.media-body
+						%h2.em-low.h1.pbn.type-neutral-4 Certificates
+			.col-sm-16	
+				%a.btn.btn-highlight.pull-right.mtxl 
+					%i.fa.fa-plus.prs 
+					Upload a new certificate
+	%ul.list-group.mtxl
+		%li.list-group-item
+			%a.link-text *.domain.com
+		%li.list-group-item
+			%a.link-text *.domain2.com
+		%li.list-group-item
+			%a.link-text foo.acme.com
