@@ -1,3 +1,39 @@
 .container
 	.mtxl
-		Upload new connection
+		%h2 Upload new connection
+	%form{:role => "form"}
+		.form-group
+			.row
+				.col-xs-24.col-sm-5
+					%label{:for => "Domain"} Domain
+				.col-xs-24.col-sm-10.col-md-8
+					%input#Domain.form-control.mtl{:placeholder => "Use *.domain.com for wildcard domains", :type => "domain"}
+			.row
+				.col-xs-24.col-sm-5
+					%label.mtl{:for => "Certificate"} Certificate (.crt)
+				.col-xs-24.col-sm-10.col-md-8
+					%textarea#Certificate.form-control.mtl{:type => "certificate"}
+				.col-xs-24.col-sm-5
+					%a.btn.btn-primary.mtl.btn-block Upload .crt file
+			.row
+				.col-xs-24.col-sm-5
+					%label.mtl{:for => "KeyFile"} Key (.key)
+				.col-xs-24.col-sm-10.col-md-8
+					%textarea#KeyFile.form-control.mtl{:type => "key"}
+				.col-xs-24.col-sm-5
+					%a.btn.btn-primary.mtl.btn-block Upload .key file
+			.row
+				.col-xs-24.col-sm-5
+					%label.mtl{:for => "CertificateAuthority"} Certificate Authority
+				.col-xs-24.col-sm-10.col-md-8
+					%select#CertificateAuthority.form-control.mtl{:type => "Certificate Authority"}
+						%option Comodo CA Limited
+						%option Equifax
+						%option Global Sign
+						%option GoDaddy
+						%option Rapid SSL
+						%option Thawte
+						%option UTN - User First Hardware
+						%option Verisign
+						%option Not Listed
+		%button.btn.btn-highlight{:type => "submit"} Submit
