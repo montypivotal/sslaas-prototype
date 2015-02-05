@@ -1,32 +1,43 @@
 .container
 	.mtxl
-		%h2 Upload new connection
+		%h2.em-high Upload new certificate
+		.mbxxl Please provide the following information in order to set up your new SSL connection.
 	%form{:role => "form"}
 		.form-group
 			.row
 				.col-xs-24.col-sm-5
-					%label{:for => "Domain"} Domain
+					%label{:for => "Domain"} 
+						%abbr.type-error-3{:title =>"required"} *
+						Domain
 				.col-xs-24.col-sm-10.col-md-8
-					%input#Domain.form-control.mtl{:placeholder => "Use *.domain.com for wildcard domains", :type => "domain"}
+					%input#Domain.form-control.mtxl{:placeholder => "Use *.domain.com for wildcard domains", :type => "domain"}
 			.row
 				.col-xs-24.col-sm-5
-					%label.mtl{:for => "Certificate"} Certificate (.crt)
+					%label.mtl{:for => "Certificate"}
+						%abbr.type-error-3{:title =>"required"} *
+						Certificate (.crt)
 				.col-xs-24.col-sm-10.col-md-8
-					%textarea#Certificate.form-control.mtl{:type => "certificate"}
-				.col-xs-24.col-sm-5
+					%textarea#Certificate.form-control.mtxl{:type => "certificate", :placeholder =>"Copy and paste"}
+					.txt-c.mtl or
 					%a.btn.btn-primary.mtl.btn-block Upload .crt file
 			.row
 				.col-xs-24.col-sm-5
-					%label.mtl{:for => "KeyFile"} Key (.key)
+					%label.mtxxl{:for => "KeyFile"}
+						%abbr.type-error-3{:title =>"required"} *
+						Key (.key)
 				.col-xs-24.col-sm-10.col-md-8
-					%textarea#KeyFile.form-control.mtl{:type => "key"}
-				.col-xs-24.col-sm-5
+					%textarea#KeyFile.form-control.mtxxl{:type => "key"}
+					.txt-c.mtl or
 					%a.btn.btn-primary.mtl.btn-block Upload .key file
 			.row
 				.col-xs-24.col-sm-5
-					%label.mtl{:for => "CertificateAuthority"} Certificate Authority
+					%label.mtxxl{:for => "CertificateAuthority"} 
+						%abbr.type-error-3{:title =>"required"} *
+						Certificate Authority
+					.mtn
+						%a.link.small{:id => "explain", :href => "#", :title => "We need an intermediate chain file which is specific to "} Why do we need this information?
 				.col-xs-24.col-sm-10.col-md-8
-					%select#CertificateAuthority.form-control.mtl{:type => "Certificate Authority"}
+					%select#CertificateAuthority.form-control.mtxxl{:type => "Certificate Authority"}
 						%option Comodo CA Limited
 						%option Equifax
 						%option Global Sign
@@ -36,4 +47,8 @@
 						%option UTN - User First Hardware
 						%option Verisign
 						%option Not Listed
-		%button.btn.btn-highlight{:type => "submit"} Submit
+			.row
+				.col-xs-24.col-sm-15.col-md-13
+					.pull-right.mtxl
+						%a.btn.btn-lowlight{:href =>"##", :onclick => "history.go(-1); return false;" } Cancel
+						%a.btn.btn-highlight{:href => "/complete"} Submit

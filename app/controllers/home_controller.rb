@@ -4,4 +4,6 @@ class HomeController < ApplicationController
   end
   def new
   end
+  def complete
+  end
 end
