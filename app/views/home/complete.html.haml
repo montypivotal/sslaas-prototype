@@ -1,17 +1,85 @@
-.container
+.container.ptxxl
 	.row
-		.col-xs-24.col-sm-16.col-sm-offset-4
-			.panel.bg-neutral-11.panel-shadow-3.mtxxl
+		.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
+			.alert.alert-info.paxxl
 				.media
 					.media-left
-						%i.fa.fa-certificate.h1.title.type-warn-2.ptxxl.plxxl.man
+						%i.fa.fa-check-circle.h1.man
 					.media-body
-						%h2.em-max.ptxxl.mtl.type-dark-1 Certificate successfully uploaded	
-				.h4.em-high.phxl.ptxxl CNAME
-				.plxxl foo.example.com
-				.h4.em-high.phxl.ptxxl Next Steps
-				%ol
+						%h2.h1.em-max.man Certificate successfully uploaded
+				.h4.em-high CNAME
+				.plxxl.h1 *.sundance.com
+				.h4.em-high Next Steps
+				%ol.plxxl.mlxl
 					%li Go to your Domain Name Service
 					%li Associate the CNAME above to an AWS ELB's ARecord
 					%li Confirm secure connection
-				.plxxl.pbxxl For more information click here
+				For more information click 
+				%a.link-text{:href => "http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/using-domain-names-with-elb.html", :target => "_blank"} here
+		.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
+			.panel.bg-neutral-11.panel-shadow-3.mtxl
+				.media
+					.media-left.pll
+						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
+					.media-body
+						%h3.em-max.type-neutral-1.ptxxl *.sundance.com
+						%h5.type-neutral-1 Issued by: Rapid SSL
+						%h5.type-neutral-1 Expires Tuesday, April 28, 2015 @ 5:00:00 PM PDT
+				.h5.em-high.plxxl.mtxl Subject Name
+				%ul.list-unstyled.plxxl.type-neutral-1.type-sm
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Country
+							.col-xs-16
+								US
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high State
+							.col-xs-16
+								California
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Locality
+							.col-xs-16
+								San Francisco
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Organization
+							.col-xs-16
+								Sundance
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Common Name
+							.col-xs-16
+								*.sundance.com
+				.h5.em-high.plxxl.mtxl Issuer Name
+				%ul.list-unstyled.plxxl.type-neutral-1.type-sm.mbxxl
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Country
+							.col-xs-16
+								US
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Organization
+							.col-xs-16
+								RapidSSL
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Common Name
+							.col-xs-16
+								RapidSSL
+	.row
+		.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
+			.pull-left
+				%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
+			.pull-right.mbxxxl
+				%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate

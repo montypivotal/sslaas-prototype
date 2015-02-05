@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+i.large{
+	font-size:82px !important;
+}

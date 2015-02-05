@@ -15,10 +15,11 @@
             .col-xs-19
               .media
                 .media-left
-                  %i.fa.fa-certificate.h3.type-brand-3.mvm
+                  = link_to root_path do
+                    %i.fa.fa-certificate.h2.type-brand-3.mvm
                 .media-body
-                  %h1.pbn.type-neutral-9.h3.mvm Pivotal SSL Connect
+                  %h1.pbn.type-neutral-9.h3.mvl Pivotal SSL Connect
             .col-xs-5
               .txt-r.mtl
-                %a.link-text Help
+                %a.link-inverse Help
       = yield
