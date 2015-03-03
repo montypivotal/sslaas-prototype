@@ -1,16 +1,6 @@
 .container
-	.mtxl
-		.row
-			.col-xs-8
-				.h2 Certificates
-			.col-xs-16	
-				%a.btn.btn-highlight.pull-right.mtxl{:href => "/new"} 
-					%i.fa.fa-plus.prs 
-					Upload a new certificate
-	%ul.list-group.mtxl
-		%li.list-group-item
-			%a.link-text *.domain.com
-		%li.list-group-item
-			%a.link-text *.domain2.com
-		%li.list-group-item
-			%a.link-text foo.acme.com
+	%a.btn.btn-default.mtxl{:href => "/new"} 
+		New Certificate
+	%a.btn.btn-default.mtxl{:href => "/existing"} 
+		Existing Certificate
+			

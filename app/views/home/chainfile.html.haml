@@ -1,0 +1,24 @@
+.container
+	.mtxl
+		.row
+			.col-xs-24.col-sm-15
+				%h2.em-high Include an intermediate chain file
+				.mbxxl To ensure that security is set up on all devices, we need to establish a complete security chain. You have uploaded a .crt from an issuer for which we do not have an intermediate chain file. Please contact your issuer to obtain this file and upload it here.
+	%form{:role => "form"}
+		.form-group
+			.row
+				.col-xs-24.col-sm-5
+					%label.mtxl{:for => "CertificateAuthority"} 
+						%abbr.type-error-3{:title =>"required"} *
+						Intermediate Chain File
+					.mtn
+						%a.link.small{:id => "explain_icf", 'data-toggle' => "tooltip",:href => "http://en.wikipedia.org/wiki/Intermediate_certificate_authorities", :title => "Wikipedia", :target => '_blank'} What is this?
+				.col-xs-24.col-sm-10.col-md-8
+					%textarea#Certificate.form-control.mtxl{:type => "certificate", :placeholder =>"Copy and paste"}
+					.txt-c.mtl or
+					%a.btn.btn-primary.mtl.btn-block Upload .pem file
+			.row
+				.col-xs-24.col-sm-15.col-md-13
+					.pull-right.mtxl.mbxxxl
+						%a.btn.btn-lowlight{:href =>"##", :onclick => "history.go(-1); return false;" } Cancel
+						%a.btn.btn-highlight{:href => "/complete"} Submit

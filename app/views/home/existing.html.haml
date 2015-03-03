@@ -1,0 +1,78 @@
+.container
+	.row
+		.col-xs-24.col-sm-20.col-md-16
+			.panel.bg-neutral-11.panel-shadow-3.mtxxl
+				.media
+					.media-left.pll
+						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
+					.media-body
+						%h3.em-max.type-neutral-1.ptxxl *.sundance.com
+						%h5.type-neutral-1 Issued by: Rapid SSL
+						%h5.type-neutral-1 Expires Tuesday, April 28, 2015 @ 5:00:00 PM PDT
+				.h5.em-high.plxxl.mtxl Subject Name
+				%ul.list-unstyled.plxxl.type-neutral-1.type-sm
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Country
+							.col-xs-16
+								US
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high State
+							.col-xs-16
+								California
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Locality
+							.col-xs-16
+								San Francisco
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Organization
+							.col-xs-16
+								Sundance
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Common Name
+							.col-xs-16
+								*.sundance.com
+				.h5.em-high.plxxl.mtxl Issuer Name
+				%ul.list-unstyled.plxxl.type-neutral-1.type-sm.mbxxl
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Country
+							.col-xs-16
+								US
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Organization
+							.col-xs-16
+								RapidSSL
+					%li
+						.row
+							.col-xs-8.col-sm-6.col-md-4
+								.em-high Common Name
+							.col-xs-16
+								RapidSSL
+			.pull-left
+				%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
+			.pull-right.mbxxxl
+				%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
+		.col-md-5.col-sm-4
+			%h3.h5.em-alt.em-high.ptxxl Certificates
+			%ul.list-unstyled
+				%li.bg-neutral-9.pvm.pll.mbs
+					%a *.domain.com
+				%li.bg-neutral-9.pvm.pll.mbs
+					%a *.honesty.com
+				%li.pvm.pll.mbs
+					.em-high.type-neutral-1 *.sundance.com
+				%li.bg-neutral-9.pvm.pll.mbs
+					%a *.turingmachine.com

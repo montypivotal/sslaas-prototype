@@ -6,13 +6,6 @@
 		.form-group
 			.row
 				.col-xs-24.col-sm-5
-					%label.mtxl{:for => "Domain"} 
-						%abbr.type-error-3{:title =>"required"} *
-						Domain
-				.col-xs-24.col-sm-10.col-md-8
-					%input#Domain.form-control.mtxl{:placeholder => "Use *.domain.com for wildcard domains", :type => "domain"}
-			.row
-				.col-xs-24.col-sm-5
 					%label.mtxl{:for => "Certificate"}
 						%abbr.type-error-3{:title =>"required"} *
 						Certificate (.crt)
@@ -30,26 +23,7 @@
 					.txt-c.mtl or
 					%a.btn.btn-primary.mtl.btn-block Upload .key file
 			.row
-				.col-xs-24.col-sm-5
-					%label.mtxxl{:for => "CertificateAuthority"} 
-						%abbr.type-error-3{:title =>"required"} *
-						Certificate Authority
-					.mtn
-						%a.link.small{:id => "explain_icf", 'data-toggle' => "tooltip",:href => "#", :title => "We need an intermediate chain file which is specific to "} Why do we need this information?
-				.col-xs-24.col-sm-10.col-md-8
-					.select-fancy
-						%select#CertificateAuthority.form-control.mtxxl{:type => "Certificate Authority"}
-							%option Comodo CA Limited
-							%option Equifax
-							%option Global Sign
-							%option GoDaddy
-							%option Rapid SSL
-							%option Thawte
-							%option UTN - User First Hardware
-							%option Verisign
-							%option Not Listed
-			.row
 				.col-xs-24.col-sm-15.col-md-13
 					.pull-right.mtxl.mbxxxl
 						%a.btn.btn-lowlight{:href =>"##", :onclick => "history.go(-1); return false;" } Cancel
-						%a.btn.btn-highlight{:href => "/complete"} Submit
+						%a.btn.btn-highlight{:href => "/chainfile"} Submit

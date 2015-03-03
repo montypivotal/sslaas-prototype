@@ -6,4 +6,6 @@ class HomeController < ApplicationController
   end
   def complete
   end
+  def chainfile
+  end
 end
