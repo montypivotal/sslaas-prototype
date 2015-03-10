@@ -1,0 +1,56 @@
+.pane
+	.container.pvm
+		%h2.em-max.type-neutral-2 Configure New SSL Connection
+.container
+	.mtxl
+		%h3.em-high 1. Upload certificate
+		.mbxxl Please provide the following information in order to set up your new SSL connection.
+	.row
+		.col-sm-24.col-md-17
+			.panel.bg-neutral-11.paxl
+				.maxl
+					\-----BEGIN CERTIFICATE-----
+					MIIC4DCCAkmgAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwfDELMAkGA1UEBhMCVVMx
+					EzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xJDAi
+					BgNVBAoTG1Bpdm90YWwgRmFrZSBDZXJ0IEF1dGhvcml0eTEaMBgGA1UEAxMRZmFr
+					ZWNhLnBpdm90YWwuaW8wHhcNMTUwMzA0MjAyNTIzWhcNMTYwMzAzMjAyNTIzWjBy
+					MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEUMBIGA1UEBxMLTG9z
+					IEFuZ2VsZXMxFTATBgNVBAoTDFBXUy1DdXN0b21lcjEhMB8GA1UEAxMYcHdzLWN1
+					c3RvbWVyLmV4YW1wbGUuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9
+					5+7bBQW9tmU15vIu7phF4efvdcVSz81h0EuPxp+P5EFU+0s9qYipq5AIN1kSJkrC
+					UcS6zfMeQ8BD+4zwiSkFK+w2xPKMdc4uylbNTPajotuOLzaGzEXZ20ffrBgsP8lg
+					OaR4aniKY4XpdQkqmP4F6RDe0G0o2mTPWd1zcoAFqQIDAQABo3sweTAJBgNVHRME
+					AjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0
+					ZTAdBgNVHQ4EFgQU9Yg3LUdTvZX0ZKcFW65EsFcNFD8wHwYDVR0jBBgwFoAUGdqz
+					GI2sbdmpOPnYPiM1CFgCnrYwDQYJKoZIhvcNAQELBQADgYEAnSpicanc1ZlW24RI
+					WM5TEWZY7ZQv2tWE/VHlC+uOS+VhtsrWne984UlpLxdQdqf73qMAU+GiGmRWLAq8
+					RWpZ9ekx/pZM86FjMZjfSi3dfrG4rpJtgBVLOi7UkkO0Mk1/t7jY5iFFyo/Oj4XD
+					bJXYvrQhSXI0o1g+E6PAq7y9Ouc=
+					\-----END CERTIFICATE-----
+				%a.pll.txt-r{:href => "new"} Change
+	.mtxxl
+		%h3.em-high.mtm 2. Provide Key
+		.mbxxl Please provide the following information in order to set up your new SSL connection.
+	.row
+		.col-sm-7
+			%ul.list-unstyled.lvxl
+				%li
+					%a.btn.btn-primary.btn-block{:href => "cert-key-uploaded"} Upload .key
+				%li
+					%button.btn.btn-primary.btn-block{"data-target" => "#paste-text", "data-toggle" => "modal", :type => "button"} Paste plain text key
+					#paste-text.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+						.modal-dialog
+							.modal-content
+								.modal-header
+									Paste plain text key
+									%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+										%span{"aria-hidden" => "true"} &times;
+								.modal-body.mal
+									.form-group
+										%textarea.form-control{:rows=>"8"}
+								.modal-footer.mal
+									%button.btn.btn-lowlight{"data-dismiss" => "modal", :type => "button"} Cancel
+									%a.btn.btn-highlight{:type => "button", :href=>"cert-key-uploaded"} Upload
+	.row
+		.col-sm-7
+			%a.btn.btn-highlight.disabled.mtxxl{:href=>"complete"} Submit

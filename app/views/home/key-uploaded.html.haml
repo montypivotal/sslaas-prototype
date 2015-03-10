@@ -33,25 +33,10 @@
 		%h3.em-high.mtm 2. Provide Key
 		.mbxxl Please provide the following information in order to set up your new SSL connection.
 	.row
-		.col-sm-7
-			%ul.list-unstyled.lvxl
-				%li
-					%a.btn.btn-primary.btn-block{:href=>"/key-uploaded"} Upload .key
-				%li
-					%button.btn.btn-primary.btn-block{"data-target" => "#paste-text", "data-toggle" => "modal", :type => "button"} Paste plain text key
-					#paste-text.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-						.modal-dialog
-							.modal-content
-								.modal-header
-									Paste plain text key
-									%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-										%span{"aria-hidden" => "true"} &times;
-								.modal-body.mal
-									.form-group
-										%textarea.form-control{:rows=>"8"}
-								.modal-footer.mal
-									%button.btn.btn-lowlight{"data-dismiss" => "modal", :type => "button"} Cancel
-									%button.btn.btn-highlight{:type => "button", :href=>"cert-key-uploaded"} Upload
+		.col-sm-10
+			.panel.bg-neutral-11.paxl
+				xxijoaeth_432r4.key
+				%a.pll.txt-r{:href => "new"} Change
 	.row
 		.col-sm-7
-			%a.btn.btn-primary.disabled.mtxxl Submit
+			%a.btn.btn-highlight.mtxxl Submit

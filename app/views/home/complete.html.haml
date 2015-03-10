@@ -1,23 +1,28 @@
 .container.ptxxl
 	.row
-		.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
-			.alert.alert-info.paxxl
+		.col-xs-24.col-sm-20.col-md-16
+			.alert.alert-success.paxxl.mbxl
 				.media
 					.media-left
-						%i.fa.fa-check-circle.h1.man
+						%i.fa.fa-check-circle.h2.man
 					.media-body
-						%h2.h1.em-max.man Certificate successfully uploaded
-				.h4.em-high CNAME
-				.plxxl.h1 *.sundance.com
-				.h4.em-high Next Steps
-				%ol.plxxl.mlxl
-					%li Go to your Domain Name Service
-					%li Associate the CNAME above to an AWS ELB's ARecord
-					%li Confirm secure connection
-				For more information click 
-				%a.link-text{:href => "http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/using-domain-names-with-elb.html", :target => "_blank"} here
-		.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
-			.panel.bg-neutral-11.panel-shadow-3.mtxl
+						%h2.em-max.man Success happened
+				In order to ensure that your apps are secure on this domain, you must associate the alias
+				.h4.em-high Associate the alias
+				%ul.list-unstyled
+					%li 1. Go to your Domain Name Service
+					%li 2. Associate the alias below to an AWS ELB's ARecord
+					%li.bg-glow-4.mlxl.mvl
+						%ul.list-inline.lhxl.plxl
+							%li.txt-m
+								.h5.em-max.em-alt Alias
+							%li.txt-m
+								sundance-com-07a1f123.ssl.cfapps.io
+					%li 3. Confirm secure connection 
+				%p.txt-r
+					%button.btn.btn-highlight-alt.mtxl{:"data-dismiss"=>"alert"}
+						Complete
+			.panel.bg-neutral-11.panel-shadow-3.mtxxl
 				.media
 					.media-left.pll
 						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
@@ -77,9 +82,20 @@
 								.em-high Common Name
 							.col-xs-16
 								RapidSSL
-	.row
-		.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
-			.pull-left
-				%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
-			.pull-right.mbxxxl
-				%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
+			.row
+				.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
+					.pull-left
+						%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
+					.pull-right.mbxxxl
+						%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
+		.col-md-5.col-sm-4
+			%h3.h5.em-alt.em-high.ptxxl Certificates
+			%ul.list-unstyled
+				%li.bg-neutral-9.pvm.pll.mbs
+					%a *.domain.com
+				%li.bg-neutral-9.pvm.pll.mbs
+					%a *.honesty.com
+				%li.pvm.pll.mbs
+					.em-high.type-neutral-1 *.sundance.com
+				%li.bg-neutral-9.pvm.pll.mbs
+					%a *.turingmachine.com

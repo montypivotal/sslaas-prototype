@@ -1,0 +1,39 @@
+.pane
+	.container.pvm
+		%h2.em-max.type-neutral-2 Configure New SSL Connection
+.container
+	.mtxl
+		%h3.em-high 1. Upload certificate
+		.mbxxl Please provide the following information in order to set up your new SSL connection.
+	.row
+		.col-sm-10
+			.panel.bg-neutral-11.paxl
+				xxijoaeth_432r4.zip
+				%a.pll.txt-r{:href => "new"} Change
+	.mtxxl
+		%h3.em-high.mtm 2. Provide Key
+		.mbxxl Please provide the following information in order to set up your new SSL connection.
+	.row
+		.col-sm-7
+			%ul.list-unstyled.lvxl
+				%li
+					%a.btn.btn-primary.btn-block{:href => "cert-key-uploaded"} Upload .key
+				%li
+					%button.btn.btn-primary.btn-block{"data-target" => "#paste-text", "data-toggle" => "modal", :type => "button"} Paste plain text key
+					#paste-text.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+						.modal-dialog
+							.modal-content
+								.modal-header
+									Paste plain text key
+									%button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+										%span{"aria-hidden" => "true"} &times;
+								.modal-body.mal
+									.form-group
+										%textarea.form-control{:rows=>"8"}
+								.modal-footer.mal
+									%button.btn.btn-lowlight{"data-dismiss" => "modal", :type => "button"} Cancel
+									%a.btn.btn-highlight{:type => "button", :href=>"cert-key-uploaded"} Upload
+	.row
+		.col-sm-7
+			%a.btn.btn-highlight.disabled.mtxxl Submit
+

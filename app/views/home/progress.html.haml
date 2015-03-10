@@ -1,0 +1,22 @@
+.container.ptxxl
+	.row
+		.col-xs-24.col-sm-20.col-md-16
+			.alert.alert-info.paxxl
+				.media
+					.media-left
+						%i.fa.fa-cloud-upload.h1.man
+					.media-body
+						%h2.h1.em-max.man Provisioning in progress...
+				We are currently provisioning an ELB. In the meantime, please take the following next steps
+				.h4.em-high Next Steps
+				%ul.list-unstyled
+					%li 1. Go to your Domain Name Service
+					%li 2. Associate the alias below to an AWS ELB's ARecord
+					%li.bg-glow-4.mvl
+						%ul.list-inline.lhxl.plxl
+							%li.txt-m
+								.h5.em-max.em-alt Alias
+							%li.txt-m
+								sundance-com-07a1f123.ssl.cfapps.io
+					%li 3.Confirm secure connection 
+				
