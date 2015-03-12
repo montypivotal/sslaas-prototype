@@ -1,7 +1,7 @@
-.container
+.container.ptxl
 	.row
 		.col-xs-24.col-sm-20.col-md-16
-			.panel.bg-neutral-11.panel-shadow-3.mtxxl
+			.panel.bg-neutral-11.panel-shadow-3
 				.media
 					.media-left.pll
 						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
@@ -61,18 +61,20 @@
 								.em-high Common Name
 							.col-xs-16
 								RapidSSL
-			.pull-left
-				%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
-			.pull-right.mbxxxl
-				%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
-		.col-md-5.col-sm-4
-			%h3.h5.em-alt.em-high.ptxxl Certificates
-			%ul.list-unstyled
-				%li.bg-neutral-9.pvm.pll.mbs
+			.row
+				.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
+					.pull-left
+						%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
+					.pull-right.mbxxxl
+						%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
+		.col-md-5.col-sm-24
+			%h3.h5.em-alt.em-high.ptl Certificates
+			%ul.list-group
+				%li.list-group-item
 					%a *.domain.com
-				%li.bg-neutral-9.pvm.pll.mbs
+				%li.list-group-item
 					%a *.honesty.com
-				%li.pvm.pll.mbs
+				%li.list-group-item
 					.em-high.type-neutral-1 *.sundance.com
-				%li.bg-neutral-9.pvm.pll.mbs
+				%li.list-group-item
 					%a *.turingmachine.com

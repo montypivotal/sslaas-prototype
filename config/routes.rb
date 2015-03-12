@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/key-uploaded', to: 'home#key-uploaded'
   get '/cert-key-uploaded', to: 'home#cert-key-uploaded'
   get '/progress', to: 'home#progress'
+  get '/validation-error', to: 'home#validation-error'
 end

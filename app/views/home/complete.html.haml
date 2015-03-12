@@ -1,28 +1,29 @@
-.container.ptxxl
+.container.ptxl
 	.row
 		.col-xs-24.col-sm-20.col-md-16
-			.alert.alert-success.paxxl.mbxl
+			.alert.alert-success.paxl.mbxl
 				.media
 					.media-left
 						%i.fa.fa-check-circle.h2.man
 					.media-body
 						%h2.em-max.man Success happened
-				In order to ensure that your apps are secure on this domain, you must associate the alias
-				.h4.em-high Associate the alias
-				%ul.list-unstyled
-					%li 1. Go to your Domain Name Service
-					%li 2. Associate the alias below to an AWS ELB's ARecord
-					%li.bg-glow-4.mlxl.mvl
-						%ul.list-inline.lhxl.plxl
-							%li.txt-m
-								.h5.em-max.em-alt Alias
-							%li.txt-m
-								sundance-com-07a1f123.ssl.cfapps.io
-					%li 3. Confirm secure connection 
-				%p.txt-r
-					%button.btn.btn-highlight-alt.mtxl{:"data-dismiss"=>"alert"}
-						Complete
-			.panel.bg-neutral-11.panel-shadow-3.mtxxl
+				.mbl In order to ensure that your apps are secure on this domain, you must associate the alias
+				.panel.bg-glow-3.paxl
+					.h4.em-high.man Associate the alias
+					%ul.list-unstyled.lvm
+						%li 1. Go to your Domain Name Service
+						%li 2. Associate the alias below to an AWS ELB's ARecord
+						%li
+							%ul.list-inline.lhxl.phxl
+								%li.txt-m
+									.h5.em-max.em-alt Alias
+								%li.txt-m
+									sundance-com-07a1f123.ssl.cfapps.io
+						%li 3. Confirm secure connection 
+				%p.txt-c
+					%button.btn.btn-primary.mtn{:"data-dismiss"=>"alert"}
+						I've finished these steps
+			.panel.bg-neutral-11.panel-shadow-3
 				.media
 					.media-left.pll
 						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
@@ -88,14 +89,14 @@
 						%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
 					.pull-right.mbxxxl
 						%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
-		.col-md-5.col-sm-4
-			%h3.h5.em-alt.em-high.ptxxl Certificates
-			%ul.list-unstyled
-				%li.bg-neutral-9.pvm.pll.mbs
+		.col-md-5.col-sm-24
+			%h3.h5.em-alt.em-high.ptl Certificates
+			%ul.list-group
+				%li.list-group-item
 					%a *.domain.com
-				%li.bg-neutral-9.pvm.pll.mbs
+				%li.list-group-item
 					%a *.honesty.com
-				%li.pvm.pll.mbs
+				%li.list-group-item
 					.em-high.type-neutral-1 *.sundance.com
-				%li.bg-neutral-9.pvm.pll.mbs
+				%li.list-group-item
 					%a *.turingmachine.com
