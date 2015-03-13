@@ -15,11 +15,7 @@
 				.col-sm-7
 					%ul.list-unstyled.lvxl.ptxl
 						%li
-							%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload single .crt
-						%li
-							%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload .pem
-						%li
-							%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload .zip
+							%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload .crt, .pem or .zip
 						%li
 							%button.btn.btn-primary.btn-block{"data-target" => "#paste-text", "data-toggle" => "modal", :type => "button"} Paste plain text certificate
 							#paste-text.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
