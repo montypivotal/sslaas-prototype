@@ -9,11 +9,7 @@
 		.col-sm-7
 			%ul.list-unstyled.lvxl
 				%li
-					%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload single .crt
-				%li
-					%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload .pem
-				%li
-					%a.btn.btn-primary.btn-block{:href=>"/cert-uploaded"} Upload .zip
+					%a.btn.btn-primary.btn-block{:href=>"/cert-key-uploaded"} Upload .crt, .pem or .zip file
 				%li
 					%button.btn.btn-primary.btn-block{"data-target" => "#paste-text", "data-toggle" => "modal", :type => "button"} Paste plain text certificate
 					#paste-text.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
@@ -28,7 +24,7 @@
 										%textarea.form-control{:rows=>"8", :placeholder=>"Paste one or multiple certificates then click upload"}
 								.modal-footer.mal
 									%button.btn.btn-lowlight{"data-dismiss" => "modal", :type => "button"} Cancel
-									%a.btn.btn-highlight{:type => "button", :href=>"txt-cert-uploaded"} Upload
+									%a.btn.btn-highlight{:type => "button", :href=>"cert-key-uploaded"} Upload
 	.mtxxl
 		%h3.em-high.mtm 2. Provide Key
 		.mbxxl Please provide the following information in order to set up your new SSL connection.
