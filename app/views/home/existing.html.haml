@@ -2,13 +2,35 @@
 	.row
 		.col-xs-24.col-sm-20.col-md-16
 			.panel.bg-neutral-11.panel-shadow-3
-				.media
-					.media-left.pll
-						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
-					.media-body
-						%h3.em-max.type-neutral-1.ptxxl *.sundance.com
-						%h5.type-neutral-1 Issued by: Rapid SSL
-						%h5.type-neutral-1 Expires Tuesday, April 28, 2015 @ 5:00:00 PM PDT
+				.row
+					.col-sm-18
+						.media
+							.media-left.pll
+								%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man.mtl
+							.media-body
+								%h3.em-max.type-neutral-1.ptxxl *.sundance.com
+								%ul.list-unstyled.type-neutral-1
+									%li
+										.row
+											.col-xs-8.col-sm-5
+												.em-high Issued by
+											.col-xs-16.col-sm-19
+												Rapid SSL
+									%li
+										.row
+											.col-xs-8.col-sm-5
+												.em-high Expires
+											.col-xs-16.col-sm-19
+												Tuesday, April 28, 2015 @ 5:00:00 PM PDT
+									%li
+										.row
+											.col-xs-8.col-sm-5
+												.em-high Alias
+											.col-xs-16.col-sm-19
+												sundance-com-07a1f123.ssl.cfapps.io
+					.col-sm-6
+						.pull-right.ptxl.mtxl.mrxl.txt-r
+							%a.btn.btn-default{:href =>"new" } Update Certificate				
 				.h5.em-high.plxxl.mtxl Subject Name
 				%ul.list-unstyled.plxxl.type-neutral-1.type-sm
 					%li
@@ -61,12 +83,6 @@
 								.em-high Common Name
 							.col-xs-16
 								RapidSSL
-			.row
-				.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
-					.pull-left
-						%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
-					.pull-right.mbxxxl
-						%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
 		.col-md-5.col-sm-24
 			%h3.h5.em-alt.em-high.ptl Certificates
 			%ul.list-group
