@@ -14,7 +14,7 @@
 				.mbxl To complete your secure connection, you must associate your Pivotal SSL alias with your DNS.
 				%ul.list-unstyled.lvm
 					%li 1. Go to your Domain Name Service
-					%li 2. Associate the alias (below) with your domain via a CNAME or A Record
+					%li 2. Associate the alias (below) with your domain via a CNAME or Alias Record if it's an apex domain
 					%li.phxl.pbl
 						%label Alias
 						%input.auto-select.form-control{"data-behavior" => "AutoSelect", :readonly => "readonly", :value => "sundance-com-07a1f123.ssl.cfapps.io"}
@@ -108,10 +108,4 @@
 			%h3.h5.em-alt.em-high.ptl Certificates
 			%ul.list-group
 				%li.list-group-item
-					%a *.domain.com
-				%li.list-group-item
-					%a *.honesty.com
-				%li.list-group-item
 					.em-high.type-neutral-1 *.sundance.com
-				%li.list-group-item
-					%a *.turingmachine.com
