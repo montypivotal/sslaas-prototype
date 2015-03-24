@@ -1,11 +1,9 @@
 .container.ptxxl
 	.row
 		.col-xs-24.col-sm-20.col-md-16
-			.alert.alert-info.paxxl
-				.media
-					.media-left
-						%i.fa.fa-cloud-upload.h2.man
-					.media-body
-						%h2.em-max.man Provisioning in progress...
-				We are currently provisioning an ELB.
-	%a.btn.btn-lowlight.mtxxxl{:href=>"/complete"} this goes to the next step and will only be in the prototype
+			.media-left
+				.spinner-sm.out.man
+					%i.fa.fa-spin.fa-cog.small.mts.pan
+			.media-body
+				%h2.em-max.man Provisioning in progress...
+	%a.btn.btn-lowlight.mtxxxl.type-neutral-8.txt-r{:href=>"/complete"} this goes to the next step and will only be in the prototype

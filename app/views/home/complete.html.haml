@@ -1,36 +1,57 @@
 .container.ptxl
 	.row
 		.col-xs-24.col-sm-20.col-md-16
-			.alert.alert-success.paxl.mbxl
+			.alert.alert-success.paxl.mbn.plxxl
+				%button.close{"data-dismiss" => "alert"}
+					%i.fa.fa-times.h2.mtl
 				.media
 					.media-left
 						%i.fa.fa-check-circle.h2.man
 					.media-body
-						%h2.em-max.man Success happened
-				.mbl In order to ensure that your apps are secure on this domain, you must associate the alias
-				.panel.bg-neutral-11.paxl
-					.h4.em-high.man Associating the alias
-					%ul.list-unstyled.lvm
-						%li 1. Go to your Domain Name Service
-						%li 2. Associate the alias below to an AWS ELB's ARecord
-						%li
-							%ul.list-inline.lhxl.phxl
-								%li.txt-m
-									.h5.em-max.em-alt Alias
-								%li.txt-m
-									sundance-com-07a1f123.ssl.cfapps.io
-						%li 3. Confirm secure connection 
-				%p.txt-c
-					%button.btn.btn-primary.mtn{:"data-dismiss"=>"alert"}
+						%h2.em-max.man Provisioning Complete
+			.alert.bg-neutral-11.panel-shadow-3.paxxl.mtn.mbxl
+				.h4.em-high.man Associating the alias
+				.mbxl To complete your secure connection, you must associate your Pivotal SSL alias with your DNS.
+				%ul.list-unstyled.lvm
+					%li 1. Go to your Domain Name Service
+					%li 2. Associate the alias (below) with your domain via a CNAME or A Record
+					%li.phxl.pbl
+						%label Alias
+						%input.auto-select.form-control{"data-behavior" => "AutoSelect", :readonly => "readonly", :value => "sundance-com-07a1f123.ssl.cfapps.io"}
+					%li 3. Confirm secure connection by visiting an app on your domain.
+				%p.txt-r.mtxl.mbn
+					%button.btn.btn-highlight{:"data-dismiss"=>"alert"}
 						I've finished these steps
 			.panel.bg-neutral-11.panel-shadow-3
-				.media
-					.media-left.pll
-						%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man
-					.media-body
-						%h3.em-max.type-neutral-1.ptxxl *.sundance.com
-						%h5.type-neutral-1 Issued by: Rapid SSL
-						%h5.type-neutral-1 Expires Tuesday, April 28, 2015 @ 5:00:00 PM PDT
+				.row
+					.col-sm-18
+						.media
+							.media-left.pll
+								%i.fa.fa-certificate.large.type-warn-2.ptxxl.plxxl.prxl.man.mtl
+							.media-body
+								%h3.em-max.type-neutral-1.ptxxl *.sundance.com
+								%ul.list-unstyled.type-neutral-1
+									%li
+										.row
+											.col-xs-8.col-sm-5
+												.em-high Issued by
+											.col-xs-16.col-sm-19
+												Rapid SSL
+									%li
+										.row
+											.col-xs-8.col-sm-5
+												.em-high Expires
+											.col-xs-16.col-sm-19
+												Tuesday, April 28, 2015 @ 5:00:00 PM PDT
+									%li
+										.row
+											.col-xs-8.col-sm-5
+												.em-high Alias
+											.col-xs-16.col-sm-19
+												sundance-com-07a1f123.ssl.cfapps.io
+					.col-sm-6
+						.pull-right.ptxl.mtxl.mrxl.txt-r
+							%a.btn.btn-default{:href =>"new" } Update Certificate				
 				.h5.em-high.plxxl.mtxl Subject Name
 				%ul.list-unstyled.plxxl.type-neutral-1.type-sm
 					%li
@@ -83,12 +104,6 @@
 								.em-high Common Name
 							.col-xs-16
 								RapidSSL
-			.row
-				.col-xs-24.col-md-16.col-md-offset-4.col-sm-20.col-sm-offset-2
-					.pull-left
-						%a.btn.btn-lowlight.type-error-1{:href =>"##", :onclick => "history.go(-2); return false;" } Delete Certificate
-					.pull-right.mbxxxl
-						%a.btn.btn-primary{:href =>"##", :onclick => "history.go(-2); return false;" } Update Certificate
 		.col-md-5.col-sm-24
 			%h3.h5.em-alt.em-high.ptl Certificates
 			%ul.list-group
